@@ -1,4 +1,4 @@
-function addTodo(){
+function addTodo(event){
     event.preventDefault();
     const item = document.createElement('li');
     item.innerText = document.getElementById('item').value;
@@ -23,7 +23,7 @@ function completeTodo(event){
     const checked = event.target.getAttribute('aria-checked')
     if(checked === 'true'){
         event.target.setAttribute('aria-checked', 'false')
- } else {
-     event.target.setAttribute('aria-checked', 'true')
- }
+    } else {
+        event.target.setAttribute('aria-checked', 'true')
+    }
 }
